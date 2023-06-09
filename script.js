@@ -72,6 +72,9 @@ console.log(sabuj);
 console.log(nasim instanceof Person);
 sabuj.calAge();
 nasim.calAge();
+console.log(sabuj.__proto__ === Person.prototype);
+console.log(Person.prototype === Person.prototype);
+console.log(Person.prototype.isPrototypeOf(sabuj));
 // class
 
 // object.create()
