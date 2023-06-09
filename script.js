@@ -51,7 +51,15 @@ console.log(testObj.hasOwnProperty("birthYear"));
 function Person(nickName, birthYear) {
   this.nickName = nickName;
   this.birthYear = birthYear;
+
+  // Never do this
+  // this.calAge = function () {
+  //   console.log(2023 - birthYear);
+  // };
 }
+Person.prototype.calAge = function () {
+  console.log(2023 - this.birthYear);
+};
 
 const sabuj = new Person("sabuj", "1993");
 const nasim = new Person("nasim", 1990);
@@ -62,6 +70,8 @@ const nasim = new Person("nasim", 1990);
 
 console.log(sabuj);
 console.log(nasim instanceof Person);
+sabuj.calAge();
+nasim.calAge();
 // class
 
 // object.create()
