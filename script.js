@@ -75,6 +75,24 @@ nasim.calAge();
 console.log(sabuj.__proto__ === Person.prototype);
 console.log(Person.prototype === Person.prototype);
 console.log(Person.prototype.isPrototypeOf(sabuj));
-// class
+//ES6 class
+
+class NewUser {
+  constructor(userFullName, userBirthYear) {
+    this.userFullName = userFullName;
+    this.userBirthYear = userBirthYear;
+  }
+  calculateAge = function () {
+    return 2023 - this.userBirthYear;
+  };
+  greet = function () {
+    return `Hello, ${this.userFullName}`;
+  };
+}
+
+const newUser = new NewUser("sabuj mahonto", 1993);
+console.log(newUser);
+console.log(newUser.calculateAge());
+console.log(newUser.greet());
 
 // object.create()
