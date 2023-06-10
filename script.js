@@ -75,7 +75,9 @@ nasim.calAge();
 console.log(sabuj.__proto__ === Person.prototype);
 console.log(Person.prototype === Person.prototype);
 console.log(Person.prototype.isPrototypeOf(sabuj));
+////////////////////////////////////////////////////////
 //ES6 class
+////////////////////////////////////////////////////////
 
 class NewUser {
   constructor(userFullName, userBirthYear) {
@@ -119,4 +121,18 @@ const rahim = new CenamaHall("SpiderMen", 4);
 console.log(rahim.ticketPrice);
 
 console.log(rahim);
+////////////////////////////////////////////////////////////////////////////
 // object.create()
+//////////////////////////////////////////////////////////////////////////////
+const PersonProto = {
+  calAge() {
+    return 2023 - this.birthYear;
+  },
+};
+
+const jessika = Object.create(PersonProto);
+jessika.fullName = "jessika roy";
+jessika.birthYear = 1994;
+
+console.log(jessika);
+console.log(jessika.calAge());
