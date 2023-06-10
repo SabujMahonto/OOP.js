@@ -95,4 +95,28 @@ console.log(newUser);
 console.log(newUser.calculateAge());
 console.log(newUser.greet());
 
+// class can't Hosted
+// class always first-class function
+//class use automatic "use street"
+
+class CenamaHall {
+  constructor(movieName, setCount, audience) {
+    this.movieName = movieName;
+    this.setCount = setCount;
+    this.audience = [];
+  }
+  //getter
+  get ticketPrice() {
+    return this.setCount * 200;
+  }
+  // // setter
+  // set audienceCount(name) {
+  //   this.audience.push(name, this.movieName, this.setCount);
+  // }
+}
+
+const rahim = new CenamaHall("SpiderMen", 4);
+console.log(rahim.ticketPrice);
+
+console.log(rahim);
 // object.create()
