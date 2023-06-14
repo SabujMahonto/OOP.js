@@ -9,19 +9,20 @@ class Player {
     this.rating = rating;
     this.#tokenNum = tockenNum;
     console.log(this.#password);
-    this.greet();
-    this.playerRating();
+    this.#greet();
+    this.#playerRating();
   }
+
   #greet() {
-    return `Hello,${this.nickName}`;
+    console.log(`Hello,${this.nickName}`);
   }
   #playerRating() {
-    return `${this.nickName} has ${this.rating}`;
+    console.log(`${this.nickName} has ${this.rating}`);
   }
 }
 
 const neymar = new Player("Neymar", 22, 4.5);
-console.log(neymar.greet());
+// console.log(neymar.greet());
 
 // Extend
 
@@ -33,5 +34,5 @@ class Captain extends Player {
 }
 
 const mesi = new Captain("mesi", 11, 3.9, "blue");
-console.log(mesi.greet());
-console.log(mesi.playerRating());
+// console.log(mesi.greet());
+// console.log(mesi.playerRating());
