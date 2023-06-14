@@ -1,12 +1,22 @@
 // ES6-class
 class Player {
-  constructor(nickName, jarsiNum, rating) {
+  #tokenNum;
+  #password = 12345;
+
+  constructor(nickName, jarsiNum, rating, tockenNum) {
     this.nickName = nickName;
     this.jarsiNum = jarsiNum;
     this.rating = rating;
+    this.#tokenNum = tockenNum;
+    console.log(this.#password);
+    this.greet();
+    this.playerRating();
   }
-  greet() {
+  #greet() {
     return `Hello,${this.nickName}`;
+  }
+  #playerRating() {
+    return `${this.nickName} has ${this.rating}`;
   }
 }
 
@@ -19,9 +29,6 @@ class Captain extends Player {
   constructor(nickName, jarsiNum, rating, bandColor) {
     super(nickName, jarsiNum, rating);
     this.bandColor = bandColor;
-  }
-  playerRating() {
-    return `${this.nickName} has ${this.rating}`;
   }
 }
 
